@@ -13,6 +13,22 @@ function Greeting() {
     );
 }
 
+const todos = [
+    { task: "do da dishes", id: crypto.randomUUID()},
+    {task: "eat dis chic fil a", id: crypto.randomUUID()}
+]
+
+function makeKey() {
+    return 
+    (<ul>
+        {todos.map((todo) => (
+            <li key={todos.id}>{todos.task}</li>
+        
+        ))}
+    </ul>
+    );
+}
+
 function ListItem(props) {
     return <li>{props.animal}</li>
 }
@@ -36,7 +52,7 @@ function List(props) {
 }
 
 function App() {
-    const animals = ["sigma", "chud", "chode"];
+    const animals = ["sigma", "nonsigma", "guy"];
 
     return (
         <div>
